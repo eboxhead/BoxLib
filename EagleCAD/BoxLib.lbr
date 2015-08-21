@@ -638,17 +638,21 @@
 <text x="0" y="0.9525" size="1.27" layer="21" align="bottom-center">&gt;Name</text>
 </package>
 <package name="PADS_2512">
-<smd name="P$1" x="-1.905" y="0" dx="1.6002" dy="3.556" layer="1" roundness="50"/>
+<smd name="P$1" x="-1.905" y="0" dx="1.6002" dy="3.556" layer="1"/>
 <smd name="P$2" x="1.905" y="0" dx="1.6002" dy="3.556" layer="1"/>
 <text x="0" y="3.175" size="1.27" layer="21" align="bottom-center">&gt;Name</text>
-<text x="0" y="-4.445" size="1.27" layer="21" align="bottom-center">&gt;Value</text>
-<wire x1="-0.635" y1="2.286" x2="-3.175" y2="2.286" width="0.127" layer="21"/>
-<wire x1="-3.175" y1="2.286" x2="-3.175" y2="-2.286" width="0.127" layer="21"/>
-<wire x1="-3.175" y1="-2.286" x2="-0.635" y2="-2.286" width="0.127" layer="21"/>
-<wire x1="3.175" y1="2.286" x2="3.175" y2="-2.286" width="0.127" layer="21"/>
-<wire x1="3.175" y1="-2.286" x2="0.635" y2="-2.286" width="0.127" layer="21"/>
-<wire x1="3.175" y1="2.286" x2="0.635" y2="2.286" width="0.127" layer="21"/>
+<wire x1="-0.635" y1="2.286" x2="-3.175" y2="2.286" width="0.254" layer="21"/>
+<wire x1="-3.175" y1="2.286" x2="-3.175" y2="-2.286" width="0.254" layer="21"/>
+<wire x1="-3.175" y1="-2.286" x2="-0.635" y2="-2.286" width="0.254" layer="21"/>
+<wire x1="3.175" y1="2.286" x2="3.175" y2="-2.286" width="0.254" layer="21"/>
+<wire x1="3.175" y1="-2.286" x2="0.635" y2="-2.286" width="0.254" layer="21"/>
+<wire x1="3.175" y1="2.286" x2="0.635" y2="2.286" width="0.254" layer="21"/>
 <wire x1="0" y1="1.27" x2="0" y2="-1.27" width="0.127" layer="21"/>
+<polygon width="0.127" layer="21">
+<vertex x="-3.175" y="1.651"/>
+<vertex x="-3.048" y="2.286"/>
+<vertex x="-2.413" y="2.286"/>
+</polygon>
 </package>
 <package name="ZZZ_TQFP44">
 <smd name="P$1" x="-5.588" y="4" dx="1" dy="0.45" layer="1"/>
@@ -734,14 +738,39 @@
 <text x="5.08" y="-3.81" size="0.8128" layer="21" font="vector" align="center-left">&gt;Value</text>
 </package>
 <package name="DIODE-1N400X_.4&quot;">
-<wire x1="-2.6035" y1="1.3589" x2="2.6035" y2="1.3589" width="0.127" layer="21"/>
-<wire x1="2.6035" y1="1.3589" x2="2.6035" y2="-1.3589" width="0.127" layer="21"/>
-<wire x1="2.6035" y1="-1.3589" x2="-2.6035" y2="-1.3589" width="0.127" layer="21"/>
-<wire x1="-2.6035" y1="-1.3589" x2="-2.6035" y2="1.3589" width="0.127" layer="21"/>
+<wire x1="-2.6035" y1="1.3589" x2="2.6035" y2="1.3589" width="0.254" layer="21"/>
+<wire x1="2.6035" y1="1.3589" x2="2.6035" y2="0" width="0.254" layer="21"/>
+<wire x1="2.6035" y1="0" x2="2.6035" y2="-1.3589" width="0.254" layer="21"/>
+<wire x1="2.6035" y1="-1.3589" x2="-2.6035" y2="-1.3589" width="0.254" layer="21"/>
+<wire x1="-2.6035" y1="-1.3589" x2="-2.6035" y2="0" width="0.254" layer="21"/>
 <rectangle x1="0.635" y1="-1.27" x2="1.27" y2="1.27" layer="21"/>
 <pad name="IN" x="-5.08" y="0" drill="1.016" diameter="1.778"/>
 <pad name="OUT" x="5.08" y="0" drill="1.016" diameter="1.778"/>
-<pad name="IN2" x="5.08" y="0" drill="1.016" diameter="1.778"/>
+<wire x1="-2.6035" y1="0" x2="-2.6035" y2="1.3589" width="0.254" layer="21"/>
+<wire x1="-4.445" y1="0" x2="-2.6035" y2="0" width="0.254" layer="21"/>
+<wire x1="2.6035" y1="0" x2="4.445" y2="0" width="0.254" layer="21"/>
+<text x="0" y="1.905" size="1.27" layer="21" align="bottom-center">&gt;Name</text>
+<text x="0" y="-1.905" size="1.27" layer="21" align="top-center">&gt;Value</text>
+</package>
+<package name="ZZZ_0402">
+<smd name="P$1" x="-0.425" y="0" dx="0.55" dy="0.6" layer="1" rot="R90"/>
+<smd name="P$2" x="0.425" y="0" dx="0.55" dy="0.6" layer="1" rot="R90"/>
+<text x="0" y="-1.905" size="1.27" layer="25" align="bottom-center">&gt;Name</text>
+</package>
+<package name="ZZZ_0603">
+<smd name="P$1" x="-0.725" y="0" dx="0.95" dy="0.95" layer="1"/>
+<smd name="P$2" x="0.725" y="0" dx="0.95" dy="0.95" layer="1"/>
+<text x="0" y="-1.905" size="1.27" layer="25" align="bottom-center">&gt;Name</text>
+</package>
+<package name="ZZZ_0805">
+<smd name="P$1" x="-0.875" y="0" dx="1.1" dy="1.4" layer="1"/>
+<smd name="P$2" x="0.875" y="0" dx="1.1" dy="1.4" layer="1"/>
+<text x="0" y="-1.905" size="1.27" layer="25" align="bottom-center">&gt;Name</text>
+</package>
+<package name="ZZZ_1206">
+<smd name="P$1" x="-1.375" y="0" dx="1.25" dy="1.75" layer="1"/>
+<smd name="P$2" x="1.375" y="0" dx="1.25" dy="1.75" layer="1"/>
+<text x="0" y="-2.54" size="1.27" layer="21" align="bottom-center">&gt;Name</text>
 </package>
 </packages>
 <symbols>
@@ -2100,6 +2129,22 @@ for any losses in long circuit loops.
 <attribute name="MANUF_PN" value="ATTINY45-20PU" constant="no"/>
 <attribute name="URL" value="http://bxhd.me/1Naa2c2"/>
 </technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DIODE">
+<gates>
+<gate name="G$1" symbol="DIODE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="DIODE-1N400X_.4&quot;">
+<connects>
+<connect gate="G$1" pin="A" pad="IN"/>
+<connect gate="G$1" pin="C" pad="OUT"/>
+</connects>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
