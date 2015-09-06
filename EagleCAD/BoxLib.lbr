@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -860,6 +860,27 @@
 <text x="3.175" y="-2.54" size="0.8128" layer="25">&gt;Name</text>
 <circle x="-2.921" y="1.75" radius="0.1016" width="0" layer="21"/>
 </package>
+<package name="USB_MICRO_B_RECPTICAL_HIROSE_ZX62WRD-B-5PC">
+<smd name="5" x="-1.3" y="0" dx="0.4" dy="1.3" layer="1" rot="R180"/>
+<smd name="4" x="-0.65" y="0" dx="0.4" dy="1.3" layer="1" rot="R180"/>
+<smd name="3" x="0" y="0" dx="0.4" dy="1.3" layer="1" rot="R180"/>
+<smd name="2" x="0.65" y="0" dx="0.4" dy="1.3" layer="1" rot="R180"/>
+<smd name="1" x="1.3" y="0" dx="0.4" dy="1.3" layer="1" rot="R180"/>
+<pad name="P$1" x="4.65" y="-2.25" drill="1.1" diameter="1.5"/>
+<pad name="P$2" x="4.65" y="0" drill="1.1" diameter="1.5"/>
+<pad name="P$3" x="-4.65" y="-2.25" drill="1.1" diameter="1.5"/>
+<pad name="P$4" x="-4.65" y="0" drill="1.1" diameter="1.5"/>
+<wire x1="-3.81" y1="1.27" x2="3.81" y2="1.27" width="0.254" layer="21"/>
+<wire x1="3.81" y1="1.27" x2="4.1" y2="0.98" width="0.254" layer="21" curve="-90"/>
+<wire x1="4.1" y1="0.98" x2="4.1" y2="-2.54" width="0.254" layer="21"/>
+<wire x1="-3.81" y1="1.27" x2="-4.1" y2="0.98" width="0.254" layer="21" curve="90"/>
+<wire x1="2.54" y1="-3.81" x2="-2.54" y2="-3.81" width="0.127" layer="20"/>
+<text x="-3.81" y="1.905" size="0.8128" layer="25">&gt;Name</text>
+<circle x="1.27" y="-0.889" radius="0.127" width="0" layer="25"/>
+<wire x1="-15.24" y1="-2.54" x2="-15.24" y2="-1.27" width="0.127" layer="25"/>
+<text x="0" y="-3.556" size="0.254" layer="25" align="bottom-center">Edge</text>
+<wire x1="-4.1" y1="0.635" x2="-4.1" y2="-0.635" width="0.254" layer="21" curve="-180" cap="flat"/>
+</package>
 </packages>
 <symbols>
 <symbol name="LSD32XX">
@@ -1257,7 +1278,7 @@
 <pin name="D" x="-12.7" y="-2.54" length="middle"/>
 <pin name="GND" x="12.7" y="-2.54" visible="pin" length="middle" direction="pwr" rot="R180"/>
 <pin name="A" x="12.7" y="0" visible="pin" length="middle" rot="R180"/>
-<pin name="B" x="12.7" y="2.54" length="middle" rot="R180"/>
+<pin name="B" x="12.7" y="2.54" visible="pin" length="middle" rot="R180"/>
 <pin name="VCC" x="12.7" y="5.08" visible="pin" length="middle" direction="pwr" rot="R180"/>
 <wire x1="-7.62" y1="7.62" x2="7.62" y2="7.62" width="0.254" layer="94"/>
 <wire x1="7.62" y1="7.62" x2="7.62" y2="-5.08" width="0.254" layer="94"/>
@@ -1298,32 +1319,32 @@
 <symbol name="FTDI_FT232XX">
 <pin name="VCCIO" x="-20.32" y="22.86" visible="pin" length="middle"/>
 <pin name="VCC" x="-20.32" y="20.32" visible="pin" length="middle"/>
-<pin name="USBDM" x="-20.32" y="15.24" length="middle"/>
-<pin name="USBDP" x="-20.32" y="12.7" length="middle"/>
-<pin name="NC@1" x="-20.32" y="7.62" length="middle"/>
-<pin name="NC@2" x="-20.32" y="5.08" length="middle"/>
-<pin name="RESET#" x="-20.32" y="-7.62" length="middle"/>
-<pin name="OSCI" x="-20.32" y="-12.7" length="middle"/>
-<pin name="OSCO" x="-20.32" y="-15.24" length="middle"/>
-<pin name="3V3OUT" x="-20.32" y="-17.78" length="middle"/>
-<pin name="AGND" x="-10.16" y="-33.02" length="middle" rot="R90"/>
-<pin name="GND@1" x="-5.08" y="-33.02" length="middle" rot="R90"/>
-<pin name="GND@2" x="0" y="-33.02" length="middle" rot="R90"/>
-<pin name="GND@3" x="5.08" y="-33.02" length="middle" rot="R90"/>
-<pin name="TEST" x="10.16" y="-33.02" length="middle" rot="R90"/>
-<pin name="CBUS4" x="20.32" y="-17.78" length="middle" rot="R180"/>
-<pin name="CBUS3" x="20.32" y="-15.24" length="middle" rot="R180"/>
-<pin name="CBUS2" x="20.32" y="-12.7" length="middle" rot="R180"/>
-<pin name="CBUS1" x="20.32" y="-10.16" length="middle" rot="R180"/>
-<pin name="CBUS0" x="20.32" y="-7.62" length="middle" rot="R180"/>
-<pin name="RI#" x="20.32" y="0" length="middle" rot="R180"/>
-<pin name="DCD#" x="20.32" y="2.54" length="middle" rot="R180"/>
-<pin name="DSR#" x="20.32" y="7.62" length="middle" rot="R180"/>
-<pin name="DTR#" x="20.32" y="10.16" length="middle" rot="R180"/>
-<pin name="CTS#" x="20.32" y="12.7" length="middle" rot="R180"/>
-<pin name="RTS#" x="20.32" y="15.24" length="middle" rot="R180"/>
-<pin name="RXD" x="20.32" y="20.32" length="middle" rot="R180"/>
-<pin name="TXD" x="20.32" y="22.86" length="middle" rot="R180"/>
+<pin name="USBDM" x="-20.32" y="15.24" visible="pin" length="middle"/>
+<pin name="USBDP" x="-20.32" y="12.7" visible="pin" length="middle"/>
+<pin name="NC@1" x="-20.32" y="7.62" visible="pin" length="middle"/>
+<pin name="NC@2" x="-20.32" y="5.08" visible="pin" length="middle"/>
+<pin name="RESET#" x="-20.32" y="-7.62" visible="pin" length="middle"/>
+<pin name="OSCI" x="-20.32" y="-12.7" visible="pin" length="middle"/>
+<pin name="OSCO" x="-20.32" y="-15.24" visible="pin" length="middle"/>
+<pin name="3V3OUT" x="-20.32" y="-17.78" visible="pin" length="middle"/>
+<pin name="AGND" x="-10.16" y="-33.02" visible="pin" length="middle" rot="R90"/>
+<pin name="GND@1" x="-5.08" y="-33.02" visible="pin" length="middle" rot="R90"/>
+<pin name="GND@2" x="0" y="-33.02" visible="pin" length="middle" rot="R90"/>
+<pin name="GND@3" x="5.08" y="-33.02" visible="pin" length="middle" rot="R90"/>
+<pin name="TEST" x="10.16" y="-33.02" visible="pin" length="middle" rot="R90"/>
+<pin name="CBUS4" x="20.32" y="-17.78" visible="pin" length="middle" rot="R180"/>
+<pin name="CBUS3" x="20.32" y="-15.24" visible="pin" length="middle" rot="R180"/>
+<pin name="CBUS2" x="20.32" y="-12.7" visible="pin" length="middle" rot="R180"/>
+<pin name="CBUS1" x="20.32" y="-10.16" visible="pin" length="middle" rot="R180"/>
+<pin name="CBUS0" x="20.32" y="-7.62" visible="pin" length="middle" rot="R180"/>
+<pin name="RI#" x="20.32" y="0" visible="pin" length="middle" rot="R180"/>
+<pin name="DCD#" x="20.32" y="2.54" visible="pin" length="middle" rot="R180"/>
+<pin name="DSR#" x="20.32" y="7.62" visible="pin" length="middle" rot="R180"/>
+<pin name="DTR#" x="20.32" y="10.16" visible="pin" length="middle" rot="R180"/>
+<pin name="CTS#" x="20.32" y="12.7" visible="pin" length="middle" rot="R180"/>
+<pin name="RTS#" x="20.32" y="15.24" visible="pin" length="middle" rot="R180"/>
+<pin name="RXD" x="20.32" y="20.32" visible="pin" length="middle" rot="R180"/>
+<pin name="TXD" x="20.32" y="22.86" visible="pin" length="middle" rot="R180"/>
 <wire x1="-15.24" y1="25.4" x2="15.24" y2="25.4" width="0.254" layer="94"/>
 <wire x1="15.24" y1="25.4" x2="15.24" y2="-27.94" width="0.254" layer="94"/>
 <wire x1="15.24" y1="-27.94" x2="-15.24" y2="-27.94" width="0.254" layer="94"/>
@@ -2312,7 +2333,14 @@ for any losses in long circuit loops.
 <connect gate="G$1" pin="VCCIO" pad="4"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="CHIPSET" value="FT232RL" constant="no"/>
+<attribute name="COST" value="4.50" constant="no"/>
+<attribute name="CO_DIGIKEY" value="768-1007-1-ND" constant="no"/>
+<attribute name="MANUF" value="FTDI" constant="no"/>
+<attribute name="MANUF_PN" value="FT232RL" constant="no"/>
+<attribute name="URL" value="http://bxhd.me/1O5jHjB" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="QFN32" package="ZZZ_QFN32_5MM">
@@ -2347,7 +2375,14 @@ for any losses in long circuit loops.
 <connect gate="G$1" pin="VCCIO" pad="1"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="CHIPSET" value="FT232RQ" constant="no"/>
+<attribute name="COST" value="4.5" constant="no"/>
+<attribute name="CO_DIGIKEY" value="768-1008-1-ND" constant="no"/>
+<attribute name="MANUF" value="FTDI" constant="no"/>
+<attribute name="MANUF_PN" value="FT232RQ" constant="no"/>
+<attribute name="URL" value="http://bxhd.me/1O5jHjB" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
