@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -19,13 +19,13 @@
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
@@ -555,15 +555,21 @@
 <text x="16.51" y="-3.175" size="1.27" layer="21">&gt;Name</text>
 <text x="16.51" y="-4.445" size="1.27" layer="21">&gt;Value</text>
 </package>
-<package name="LED_VAOL-S6SB4">
-<smd name="IN" x="-0.762" y="0" dx="0.889" dy="0.889" layer="1"/>
-<smd name="OUT" x="0.762" y="0" dx="0.889" dy="0.889" layer="1"/>
-<wire x1="1.524" y1="0.762" x2="1.524" y2="-0.762" width="0.127" layer="21"/>
+<package name="LED_0603">
+<smd name="IN" x="0.762" y="0" dx="0.889" dy="0.889" layer="1" rot="R270"/>
+<smd name="OUT" x="-0.762" y="0" dx="0.889" dy="0.889" layer="1" rot="R180"/>
 <wire x1="-1.524" y1="-0.762" x2="-1.524" y2="0.762" width="0.127" layer="21"/>
-<wire x1="-1.524" y1="0.762" x2="-0.254" y2="0.762" width="0.127" layer="21"/>
-<wire x1="-1.524" y1="-0.762" x2="-0.254" y2="-0.762" width="0.127" layer="21"/>
+<wire x1="1.524" y1="0.762" x2="1.524" y2="-0.762" width="0.127" layer="21"/>
 <wire x1="1.524" y1="-0.762" x2="0.254" y2="-0.762" width="0.127" layer="21"/>
 <wire x1="1.524" y1="0.762" x2="0.254" y2="0.762" width="0.127" layer="21"/>
+<wire x1="-1.524" y1="0.762" x2="-0.254" y2="0.762" width="0.127" layer="21"/>
+<wire x1="-1.524" y1="-0.762" x2="-0.254" y2="-0.762" width="0.127" layer="21"/>
+<polygon width="0.127" layer="21">
+<vertex x="-1.2065" y="0.762"/>
+<vertex x="-1.524" y="0.4445"/>
+<vertex x="-1.524" y="0.762"/>
+</polygon>
+<text x="0" y="0" size="0.254" layer="25" rot="R90" align="center">&gt;Name</text>
 </package>
 <package name="LED_1206">
 <smd name="A" x="-1.651" y="0" dx="1.524" dy="1.6002" layer="1"/>
@@ -861,54 +867,54 @@
 <circle x="-2.921" y="1.75" radius="0.1016" width="0" layer="21"/>
 </package>
 <package name="USB_MICRO_B_RECPTICAL_HIROSE_ZX62WRD-B-5PC">
-<smd name="5" x="-1.3" y="0" dx="0.4" dy="1.3" layer="1" rot="R180"/>
-<smd name="4" x="-0.65" y="0" dx="0.4" dy="1.3" layer="1" rot="R180"/>
-<smd name="3" x="0" y="0" dx="0.4" dy="1.3" layer="1" rot="R180"/>
-<smd name="2" x="0.65" y="0" dx="0.4" dy="1.3" layer="1" rot="R180"/>
-<smd name="1" x="1.3" y="0" dx="0.4" dy="1.3" layer="1" rot="R180"/>
-<pad name="P$1" x="4.65" y="-2.25" drill="1.1" diameter="1.5"/>
-<pad name="P$2" x="4.65" y="0" drill="1.1" diameter="1.5"/>
-<pad name="P$3" x="-4.65" y="-2.25" drill="1.1" diameter="1.5"/>
-<pad name="P$4" x="-4.65" y="0" drill="1.1" diameter="1.5"/>
-<wire x1="-3.81" y1="1.27" x2="3.81" y2="1.27" width="0.254" layer="21"/>
-<wire x1="3.81" y1="1.27" x2="4.1" y2="0.98" width="0.254" layer="21" curve="-90"/>
-<wire x1="-3.81" y1="1.27" x2="-4.1" y2="0.98" width="0.254" layer="21" curve="90"/>
-<wire x1="2.54" y1="-3.81" x2="-2.54" y2="-3.81" width="0.127" layer="49"/>
-<text x="-3.81" y="1.524" size="0.3175" layer="25">&gt;Name</text>
-<circle x="1.27" y="-0.889" radius="0.127" width="0" layer="25"/>
-<text x="0" y="-3.556" size="0.254" layer="49" align="bottom-center">Edge</text>
-<wire x1="-4.1" y1="0.9525" x2="-4.1" y2="-0.9525" width="0.254" layer="21" curve="-180"/>
-<wire x1="-4.1" y1="-1.2975" x2="-4.1" y2="-3.2025" width="0.254" layer="21" curve="-180"/>
-<wire x1="4.1" y1="-3.2025" x2="4.1" y2="-1.2975" width="0.254" layer="21" curve="-180"/>
-<wire x1="4.1" y1="-0.9525" x2="4.1" y2="0.9525" width="0.254" layer="21" curve="-180"/>
-<wire x1="-4.1" y1="-0.9525" x2="-4.1" y2="-1.2975" width="0.254" layer="25"/>
-<wire x1="4.1" y1="-0.9525" x2="4.1" y2="-1.2975" width="0.254" layer="25"/>
-<text x="0" y="-1.905" size="0.254" layer="25" align="bottom-center">&gt;Manuf_PN</text>
+<smd name="5" x="-1.27" y="-1.3" dx="0.4" dy="1.3" layer="1" rot="R270"/>
+<smd name="4" x="-1.27" y="-0.65" dx="0.4" dy="1.3" layer="1" rot="R270"/>
+<smd name="3" x="-1.27" y="0" dx="0.4" dy="1.3" layer="1" rot="R270"/>
+<smd name="2" x="-1.27" y="0.65" dx="0.4" dy="1.3" layer="1" rot="R270"/>
+<smd name="1" x="-1.27" y="1.3" dx="0.4" dy="1.3" layer="1" rot="R270"/>
+<pad name="P$1" x="0.98" y="4.65" drill="1.1" diameter="1.5" rot="R90"/>
+<pad name="P$2" x="-1.27" y="4.65" drill="1.1" diameter="1.5" rot="R90"/>
+<pad name="P$3" x="0.98" y="-4.65" drill="1.1" diameter="1.5" rot="R90"/>
+<pad name="P$4" x="-1.27" y="-4.65" drill="1.1" diameter="1.5" rot="R90"/>
+<wire x1="-2.54" y1="-3.81" x2="-2.54" y2="3.81" width="0.254" layer="21"/>
+<wire x1="-2.54" y1="3.81" x2="-2.25" y2="4.1" width="0.254" layer="21" curve="-90"/>
+<wire x1="-2.54" y1="-3.81" x2="-2.25" y2="-4.1" width="0.254" layer="21" curve="90"/>
+<wire x1="2.54" y1="2.54" x2="2.54" y2="-2.54" width="0.127" layer="49"/>
+<text x="-2.794" y="-3.81" size="0.3175" layer="25" rot="R90">&gt;Name</text>
+<circle x="-0.381" y="1.27" radius="0.127" width="0" layer="25"/>
+<text x="2.286" y="0" size="0.254" layer="49" rot="R90" align="bottom-center">Edge</text>
+<wire x1="-2.2225" y1="-4.1" x2="-0.3175" y2="-4.1" width="0.254" layer="21" curve="-180"/>
+<wire x1="0.0275" y1="-4.1" x2="1.9325" y2="-4.1" width="0.254" layer="21" curve="-180"/>
+<wire x1="1.9325" y1="4.1" x2="0.0275" y2="4.1" width="0.254" layer="21" curve="-180"/>
+<wire x1="-0.3175" y1="4.1" x2="-2.2225" y2="4.1" width="0.254" layer="21" curve="-180"/>
+<wire x1="-0.3175" y1="-4.1" x2="0.0275" y2="-4.1" width="0.254" layer="25"/>
+<wire x1="-0.3175" y1="4.1" x2="0.0275" y2="4.1" width="0.254" layer="25"/>
+<text x="0.635" y="0" size="0.254" layer="25" rot="R90" align="bottom-center">&gt;Manuf_PN</text>
 </package>
 <package name="C&amp;K_AYZ102AGRLC">
-<hole x="-1.5" y="-0.73" drill="0.8636"/>
-<hole x="1.5" y="-0.73" drill="0.8636"/>
-<smd name="P$1" x="-2.5" y="1.87" dx="1" dy="1.2" layer="1"/>
-<smd name="P$2" x="0" y="1.87" dx="1" dy="1.2" layer="1"/>
-<smd name="P$3" x="2.5" y="1.87" dx="1" dy="1.2" layer="1"/>
-<text x="-4.445" y="2.54" size="0.8128" layer="21">&gt;Name</text>
-<text x="0.635" y="2.54" size="0.8128" layer="21">&gt;Purpose</text>
-<wire x1="-3.6" y1="1.27" x2="3.6" y2="1.27" width="0.127" layer="21"/>
-<wire x1="3.6" y1="1.27" x2="3.6" y2="-1.73" width="0.127" layer="21"/>
-<wire x1="3.6" y1="-1.73" x2="-3.6" y2="-1.73" width="0.127" layer="21"/>
-<wire x1="-3.6" y1="-1.73" x2="-3.6" y2="1.27" width="0.127" layer="21"/>
-<text x="-3.81" y="0" size="0.508" layer="21" rot="R90" align="bottom-center">&gt;State1</text>
-<text x="4.445" y="0" size="0.508" layer="21" rot="R90" align="bottom-center">&gt;State2</text>
+<hole x="-1.05" y="1.5" drill="0.8636"/>
+<hole x="-1.05" y="-1.5" drill="0.8636"/>
+<smd name="P$1" x="1.55" y="2.5" dx="1" dy="1.2" layer="1" rot="R270"/>
+<smd name="P$2" x="1.55" y="0" dx="1" dy="1.2" layer="1" rot="R270"/>
+<smd name="P$3" x="1.55" y="-2.5" dx="1" dy="1.2" layer="1" rot="R270"/>
+<text x="2.22" y="4.445" size="0.8128" layer="21" rot="R270">&gt;Name</text>
+<text x="2.22" y="-0.635" size="0.8128" layer="21" rot="R270">&gt;Purpose</text>
+<wire x1="0.95" y1="3.6" x2="0.95" y2="-3.6" width="0.127" layer="21"/>
+<wire x1="0.95" y1="-3.6" x2="-2.05" y2="-3.6" width="0.127" layer="21"/>
+<wire x1="-2.05" y1="-3.6" x2="-2.05" y2="3.6" width="0.127" layer="21"/>
+<wire x1="-2.05" y1="3.6" x2="0.95" y2="3.6" width="0.127" layer="21"/>
+<text x="-0.32" y="3.81" size="0.508" layer="21" align="bottom-center">&gt;State1</text>
+<text x="-0.32" y="-4.445" size="0.508" layer="21" align="bottom-center">&gt;State2</text>
 </package>
 <package name="8-MSOP">
-<smd name="P$1" x="-1.6" y="0.975" dx="0.889" dy="0.42" layer="1"/>
-<smd name="P$2" x="-1.6" y="0.325" dx="0.889" dy="0.42" layer="1"/>
-<smd name="P$3" x="-1.6" y="-0.325" dx="0.889" dy="0.42" layer="1"/>
-<smd name="P$4" x="-1.6" y="-0.975" dx="0.889" dy="0.42" layer="1"/>
-<smd name="P$5" x="1.6" y="-0.975" dx="0.889" dy="0.42" layer="1" rot="R180"/>
-<smd name="P$6" x="1.6" y="-0.325" dx="0.889" dy="0.42" layer="1" rot="R180"/>
-<smd name="P$7" x="1.6" y="0.325" dx="0.889" dy="0.42" layer="1" rot="R180"/>
-<smd name="P$8" x="1.6" y="0.975" dx="0.889" dy="0.42" layer="1" rot="R180"/>
+<smd name="P$1" x="-2.0445" y="0.975" dx="0.889" dy="0.42" layer="1"/>
+<smd name="P$2" x="-2.0445" y="0.325" dx="0.889" dy="0.42" layer="1"/>
+<smd name="P$3" x="-2.0445" y="-0.325" dx="0.889" dy="0.42" layer="1"/>
+<smd name="P$4" x="-2.0445" y="-0.975" dx="0.889" dy="0.42" layer="1"/>
+<smd name="P$5" x="2.0445" y="-0.975" dx="0.889" dy="0.42" layer="1" rot="R180"/>
+<smd name="P$6" x="2.0445" y="-0.325" dx="0.889" dy="0.42" layer="1" rot="R180"/>
+<smd name="P$7" x="2.0445" y="0.325" dx="0.889" dy="0.42" layer="1" rot="R180"/>
+<smd name="P$8" x="2.0445" y="0.975" dx="0.889" dy="0.42" layer="1" rot="R180"/>
 <wire x1="-1.5" y1="1.5" x2="1.5" y2="1.5" width="0.127" layer="21"/>
 <wire x1="1.5" y1="1.5" x2="1.5" y2="-1.5" width="0.127" layer="21"/>
 <wire x1="1.5" y1="-1.5" x2="-1.5" y2="-1.5" width="0.127" layer="21"/>
@@ -922,9 +928,36 @@
 <text x="1.5" y="-1.905" size="0.508" layer="25" align="center-right">&gt;Name</text>
 </package>
 <package name="SOT23_2.8MM">
+<smd name="3" x="0.8855" y="0" dx="0.802" dy="0.972" layer="1" rot="R270"/>
+<smd name="1" x="-0.8855" y="0.95" dx="0.802" dy="0.972" layer="1" rot="R270"/>
+<smd name="2" x="-0.8855" y="-0.95" dx="0.802" dy="0.972" layer="1" rot="R270"/>
+<wire x1="0.65" y1="1.46" x2="0.65" y2="-1.46" width="0.127" layer="21"/>
+<wire x1="0.65" y1="-1.46" x2="-0.65" y2="-1.46" width="0.127" layer="21"/>
+<wire x1="-0.65" y1="-1.46" x2="-0.65" y2="1.46" width="0.127" layer="21"/>
+<wire x1="-0.65" y1="1.46" x2="0.65" y2="1.46" width="0.127" layer="21"/>
+<text x="-0.635" y="-1.905" size="0.3048" layer="21">&gt;Name</text>
+<polygon width="0.127" layer="21">
+<vertex x="-0.635" y="0.825"/>
+<vertex x="0" y="1.46"/>
+<vertex x="-0.635" y="1.46"/>
+</polygon>
+</package>
+<package name="2X2.5MM_PAD">
+<smd name="P$1" x="0" y="1.25" dx="2" dy="2.5" layer="1"/>
+<text x="0" y="-1.905" size="0.381" layer="25" rot="R90" align="center-right">&gt;Name</text>
+</package>
+<package name="3X2MM_PAD">
+<smd name="P$1" x="0" y="1.5" dx="2" dy="3" layer="1"/>
+<text x="0" y="-1.27" size="0.381" layer="25" rot="R180" align="center">&gt;Name</text>
+</package>
+<package name="2X2MM_PAD">
+<smd name="P$1" x="0" y="1" dx="2" dy="2" layer="1"/>
+<text x="0" y="1.27" size="0.8128" layer="25" align="bottom-center">&gt;name</text>
+</package>
+<package name="SOT23-3">
 <smd name="3" x="0" y="0.8855" dx="0.802" dy="0.972" layer="1"/>
-<smd name="1" x="-0.95" y="-0.8855" dx="0.802" dy="0.972" layer="1"/>
-<smd name="2" x="0.95" y="-0.8855" dx="0.802" dy="0.972" layer="1"/>
+<smd name="1" x="-0.9525" y="-0.8855" dx="0.802" dy="0.972" layer="1"/>
+<smd name="2" x="0.9525" y="-0.8855" dx="0.802" dy="0.972" layer="1"/>
 <wire x1="-1.46" y1="0.65" x2="1.46" y2="0.65" width="0.127" layer="21"/>
 <wire x1="1.46" y1="0.65" x2="1.46" y2="-0.65" width="0.127" layer="21"/>
 <wire x1="1.46" y1="-0.65" x2="-1.46" y2="-0.65" width="0.127" layer="21"/>
@@ -936,17 +969,86 @@
 <vertex x="-1.46" y="-0.635"/>
 </polygon>
 </package>
-<package name="2X2.5MM_PAD">
-<smd name="P$1" x="0" y="0" dx="2" dy="2.5" layer="1"/>
-<text x="0" y="-1.905" size="0.381" layer="25" rot="R90" align="center-right">&gt;Name</text>
+<package name="SMD_RESISTOR_JUMPER_2">
+<smd name="P$1" x="0" y="0" dx="1.1" dy="1.4" layer="1"/>
+<smd name="02" x="1.75" y="0" dx="1.1" dy="1.4" layer="1"/>
+<text x="0" y="-1.524" size="0.762" layer="25" align="bottom-center">&gt;Name</text>
+<smd name="O1" x="-1.75" y="0" dx="1.1" dy="1.4" layer="1"/>
+<text x="-1.75" y="1.27" size="0.508" layer="27" distance="53" align="center">&gt;option1</text>
+<text x="1.75" y="1.27" size="0.508" layer="27" align="center">&gt;option2</text>
 </package>
-<package name="3X2MM_PAD">
-<smd name="P$1" x="0" y="0.5" dx="2" dy="3" layer="1"/>
-<text x="0" y="-1.27" size="0.381" layer="25" rot="R90" align="center-right">&gt;Name</text>
+<package name="8-SOIC">
+<smd name="P$1" x="-3.0353" y="1.905" dx="1.27" dy="0.635" layer="1"/>
+<smd name="P$2" x="-3.0353" y="0.635" dx="1.27" dy="0.635" layer="1"/>
+<smd name="P$3" x="-3.0353" y="-0.635" dx="1.27" dy="0.635" layer="1"/>
+<smd name="P$4" x="-3.0353" y="-1.905" dx="1.27" dy="0.635" layer="1"/>
+<smd name="P$5" x="3.0353" y="-1.905" dx="1.27" dy="0.635" layer="1"/>
+<smd name="P$6" x="3.0353" y="-0.635" dx="1.27" dy="0.635" layer="1"/>
+<smd name="P$7" x="3.0353" y="0.635" dx="1.27" dy="0.635" layer="1"/>
+<smd name="P$8" x="3.0353" y="1.905" dx="1.27" dy="0.6604" layer="1"/>
+<wire x1="-2" y1="2.5" x2="2" y2="2.5" width="0.254" layer="21"/>
+<wire x1="2" y1="2.5" x2="2" y2="-2.5" width="0.254" layer="21"/>
+<wire x1="2" y1="-2.5" x2="-2" y2="-2.5" width="0.254" layer="21"/>
+<wire x1="-2" y1="-2.5" x2="-2" y2="2.5" width="0.254" layer="21"/>
+<text x="0" y="-0.635" size="0.8128" layer="21" align="center">&gt;Chipset</text>
+<polygon width="0.254" layer="21">
+<vertex x="-2" y="1.5"/>
+<vertex x="-2" y="2.5"/>
+<vertex x="-1" y="2.5"/>
+</polygon>
+<text x="3.81" y="-2.54" size="0.8128" layer="21">&gt;Name</text>
 </package>
-<package name="2X2MM_PAD">
-<smd name="P$1" x="0" y="0" dx="2" dy="2" layer="1"/>
-<text x="0" y="1.27" size="0.8128" layer="25" align="bottom-center">&gt;name</text>
+<package name="FCI_09-508_3">
+<pad name="P$1" x="-24.892" y="0" drill="0.8" shape="square"/>
+<pad name="P$2" x="-3.81" y="2.54" drill="0.8" shape="square"/>
+<pad name="P$3" x="0" y="0" drill="0.8"/>
+<pad name="P$4" x="24.892" y="0" drill="0.8"/>
+<pad name="P$5" x="3.81" y="2.54" drill="0.8"/>
+<pad name="P$6" x="0" y="2.54" drill="0.8"/>
+</package>
+<package name="USB_MICRO_B_RECETICAL_JAE_DX4R105JJCR1800">
+<wire x1="-2.5" y1="4.1" x2="2.5" y2="4.1" width="0.127" layer="49"/>
+<wire x1="2.5" y1="4.1" x2="2.5" y2="-4.1" width="0.127" layer="49"/>
+<wire x1="2.5" y1="-4.1" x2="-2.5" y2="-4.1" width="0.127" layer="49"/>
+<wire x1="-2.5" y1="-4.1" x2="-2.5" y2="4.1" width="0.127" layer="49"/>
+<smd name="P$1" x="-1.905" y="1.3" dx="1.2" dy="0.4" layer="1"/>
+<smd name="P$2" x="-1.905" y="0.65" dx="1.2" dy="0.4" layer="1"/>
+<smd name="P$3" x="-1.905" y="0" dx="1.2" dy="0.4" layer="1"/>
+<smd name="P$4" x="-1.905" y="-0.65" dx="1.2" dy="0.4" layer="1"/>
+<smd name="P$5" x="-1.905" y="-1.3" dx="1.2" dy="0.4" layer="1"/>
+</package>
+<package name="2X4MM_PAD">
+<smd name="P$1" x="0" y="2" dx="2" dy="4" layer="1"/>
+<text x="0" y="-0.635" size="0.8128" layer="21" rot="R90" align="center-right">&gt;name</text>
+</package>
+<package name="USB_MICRO_B_RECEPTICAL_MOLEX_1050171001_BOTTOM_MOUNT">
+<smd name="5" x="2.0875" y="-1.3" dx="0.4" dy="1.35" layer="1" rot="R270"/>
+<smd name="4" x="2.0875" y="-0.65" dx="0.4" dy="1.35" layer="1" rot="R270"/>
+<smd name="3" x="2.0875" y="0" dx="0.4" dy="1.35" layer="1" rot="R270"/>
+<smd name="2" x="2.0875" y="0.65" dx="0.4" dy="1.35" layer="1" rot="R270"/>
+<smd name="1" x="2.0875" y="1.3" dx="0.4" dy="1.35" layer="1" rot="R270"/>
+<pad name="P$1" x="2.0875" y="-2.5" drill="0.85" diameter="1.45" rot="R180"/>
+<pad name="P$3" x="2.0875" y="2.5" drill="0.85" diameter="1.45" rot="R180"/>
+<pad name="P$2" x="-0.6125" y="-3.5" drill="1.3" rot="R180"/>
+<pad name="P$4" x="-0.6125" y="3.5" drill="1.3" rot="R180"/>
+<wire x1="-2.7625" y1="-3.81" x2="-2.7625" y2="3.81" width="0.0254" layer="49"/>
+<text x="3.175" y="2.54" size="0.8128" layer="25" rot="R270">&gt;Name</text>
+<text x="-3.175" y="0" size="0.8128" layer="49" rot="R270" align="center">Board Edge</text>
+</package>
+<package name="USB_MOCRI_B-RECPETICAL_MOLEX_1051640001_TOP_MOUNT">
+<smd name="1" x="-1.71" y="1.3" dx="1.38" dy="0.45" layer="1"/>
+<smd name="2" x="-1.71" y="0.65" dx="1.38" dy="0.45" layer="1"/>
+<smd name="3" x="-1.71" y="0" dx="1.38" dy="0.45" layer="1"/>
+<smd name="4" x="-1.71" y="-0.65" dx="1.38" dy="0.45" layer="1"/>
+<smd name="5" x="-1.71" y="-1.3" dx="1.38" dy="0.45" layer="1"/>
+<wire x1="2.4" y1="-3.81" x2="2.4" y2="3.81" width="0.0254" layer="49"/>
+<smd name="P$1" x="-1.35" y="-2.4625" dx="2.1" dy="1.475" layer="1" rot="R180"/>
+<smd name="P$2" x="-1.35" y="2.4625" dx="2.1" dy="1.475" layer="1" rot="R180"/>
+<pad name="P$3" x="1" y="-3.95" drill="1.3" diameter="1.9" rot="R180"/>
+<pad name="P$4" x="1" y="3.95" drill="1.3" diameter="1.9" rot="R180"/>
+<circle x="-2.908" y="1.27" radius="0.089803125" width="0.127" layer="21"/>
+<text x="-3.175" y="-2.54" size="0.508" layer="25" rot="R90" align="center-left">&gt;name</text>
+<text x="2.54" y="0" size="0.508" layer="49" rot="R90" align="top-center">Board Edge</text>
 </package>
 </packages>
 <symbols>
@@ -1268,8 +1370,8 @@
 <wire x1="-0.3175" y1="-0.635" x2="0.3175" y2="0.635" width="0.254" layer="94"/>
 <wire x1="0.3175" y1="0.635" x2="0.9525" y2="-0.635" width="0.254" layer="94"/>
 <wire x1="0.9525" y1="-0.635" x2="1.5875" y2="0.635" width="0.254" layer="94"/>
-<pin name="P$1" x="-5.08" y="0" visible="off" length="short"/>
-<pin name="P$2" x="5.08" y="0" visible="off" length="short" rot="R180"/>
+<pin name="P$1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+<pin name="P$2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
 <text x="0" y="1.397" size="1.778" layer="95" align="bottom-center">&gt;Name</text>
 <text x="0" y="-2.54" size="1.778" layer="96" align="bottom-center">&gt;Value</text>
 <wire x1="1.5875" y1="0.635" x2="2.2225" y2="-0.635" width="0.254" layer="94"/>
@@ -1462,8 +1564,8 @@
 <text x="7.62" y="-12.7" size="1.27" layer="94" align="bottom-right">&gt;ManuF_PN</text>
 </symbol>
 <symbol name="CAPACITOR">
-<pin name="P$1" x="-5.08" y="0" visible="off" length="short"/>
-<pin name="P$2" x="2.54" y="0" visible="off" length="short" rot="R180"/>
+<pin name="P$1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+<pin name="P$2" x="2.54" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
 <wire x1="-1.905" y1="1.27" x2="-1.905" y2="0" width="0.254" layer="94"/>
 <wire x1="-1.905" y1="0" x2="-1.905" y2="-1.27" width="0.254" layer="94"/>
 <wire x1="-0.635" y1="1.27" x2="-0.635" y2="0" width="0.254" layer="94"/>
@@ -1523,6 +1625,32 @@
 <wire x1="-2.54" y1="0" x2="-1.905" y2="0" width="0.254" layer="94"/>
 <wire x1="-0.635" y1="1.27" x2="-0.635" y2="-1.27" width="0.254" layer="94" curve="90"/>
 <wire x1="0" y1="0" x2="-1.016" y2="0" width="0.254" layer="94"/>
+</symbol>
+<symbol name="LINEAR_REGULATOR">
+<pin name="IN" x="-12.7" y="2.54" visible="pin" length="middle" direction="pwr"/>
+<pin name="GROUND" x="0" y="-7.62" visible="pad" length="middle" direction="pwr" rot="R90"/>
+<pin name="OUT" x="12.7" y="2.54" visible="pin" length="middle" direction="pwr" rot="R180"/>
+<wire x1="-7.62" y1="5.08" x2="7.62" y2="5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="5.08" x2="7.62" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-2.54" x2="-7.62" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-2.54" x2="-7.62" y2="5.08" width="0.254" layer="94"/>
+<text x="0" y="0" size="1.524" layer="95" align="top-center">GND</text>
+<text x="8.89" y="-2.54" size="1.27" layer="95">&gt;Name</text>
+<text x="8.89" y="-4.064" size="1.27" layer="95">&gt;Manuf</text>
+<text x="8.89" y="-5.588" size="1.27" layer="95">&gt;Manuf_PN</text>
+</symbol>
+<symbol name="TERMINAL_BLOCK_3_POS">
+<pin name="P$1" x="-2.54" y="-10.16" visible="pin" length="middle" rot="R90"/>
+<pin name="P$2" x="0" y="-10.16" visible="pin" length="middle" rot="R90"/>
+<pin name="P$3" x="2.54" y="-10.16" visible="pin" length="middle" rot="R90"/>
+<wire x1="-5.08" y1="-5.08" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-5.08" x2="5.08" y2="2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="-5.08" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="2.54" x2="-5.08" y2="-5.08" width="0.254" layer="94"/>
+<text x="-5.08" y="3.048" size="1.27" layer="95">&gt;Name</text>
+<text x="6.096" y="-1.27" size="1.27" layer="97">&gt;pos1</text>
+<text x="6.096" y="-3.048" size="1.27" layer="97">&gt;pos2</text>
+<text x="6.096" y="-5.08" size="1.27" layer="97">&gt;pos3</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -2202,7 +2330,7 @@ for any losses in long circuit loops.
 <gate name="G$1" symbol="LED" x="0" y="0"/>
 </gates>
 <devices>
-<device name="VAOL-S6SB4" package="LED_VAOL-S6SB4">
+<device name="VAOL-S6SB4" package="LED_0603">
 <connects>
 <connect gate="G$1" pin="A" pad="IN"/>
 <connect gate="G$1" pin="C" pad="OUT"/>
@@ -2216,7 +2344,10 @@ for any losses in long circuit loops.
 <attribute name="DIGIKEY" value="VAOL-S6SB4CT-ND" constant="no"/>
 <attribute name="DIGIKEY_URL" value="http://bxhd.me/1FdJN1P" constant="no"/>
 <attribute name="FV" value="3" constant="no"/>
+<attribute name="LENS" value="Clear" constant="no"/>
 <attribute name="MA" value="2" constant="no"/>
+<attribute name="MANUF" value="VCC" constant="no"/>
+<attribute name="MANUF_PN" value="VAOL-S6SB4" constant="no"/>
 <attribute name="NEWARK" value="27R0104" constant="no"/>
 <attribute name="PACKAGE" value="0603" constant="no"/>
 <attribute name="SIZE" value=".8x1.2" constant="no"/>
@@ -2224,17 +2355,91 @@ for any losses in long circuit loops.
 </technology>
 </technologies>
 </device>
-<device name="1206" package="LED_1206">
+<device name="CMDA19AY7D1S" package="LED_0603">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="A" pad="IN"/>
+<connect gate="G$1" pin="C" pad="OUT"/>
 </connects>
 <technologies>
 <technology name="">
-<attribute name="COLOR" value="" constant="no"/>
-<attribute name="PN" value="" constant="no"/>
-<attribute name="STYLE" value="1206" constant="no"/>
-<attribute name="VENDOR" value="" constant="no"/>
+<attribute name="3V_RES" value="47ohm" constant="no"/>
+<attribute name="5V_RES" value="150ohm" constant="no"/>
+<attribute name="COLOR" value="Green" constant="no"/>
+<attribute name="DATASHEET" value="http://bxhd.me/1Q5I41y" constant="no"/>
+<attribute name="DIGIKEY" value="CMDA19AY7D1SCT-ND" constant="no"/>
+<attribute name="DIGIKEY_URL" value="http://bxhd.me/1Q5I4OY" constant="no"/>
+<attribute name="FV" value="2.2" constant="no"/>
+<attribute name="LENS" value="Diffused" constant="no"/>
+<attribute name="MA" value="20" constant="no"/>
+<attribute name="MANUF" value="VCC" constant="no"/>
+<attribute name="MANUF_PN" value="CMDA19AY7D1S" constant="no"/>
+<attribute name="PACKAGE" value="0603" constant="no"/>
+<attribute name="SIZE" value=".8x1.6" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="LTST-C191KGKT" package="LED_0603">
+<connects>
+<connect gate="G$1" pin="A" pad="IN"/>
+<connect gate="G$1" pin="C" pad="OUT"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="3V_RES" value="47ohm" constant="no"/>
+<attribute name="5V_RES" value="100ohm" constant="no"/>
+<attribute name="COLOR" value="Green" constant="no"/>
+<attribute name="COST" value=".25" constant="no"/>
+<attribute name="DATASHEET" value="http://bxhd.me/1Q5J2uI" constant="no"/>
+<attribute name="DIGIKEY" value="160-1446-1-ND" constant="no"/>
+<attribute name="DIGIKEY_URL" value="http://bxhd.me/1Q5J5qo" constant="no"/>
+<attribute name="FV" value="2" constant="no"/>
+<attribute name="MA" value="30" constant="no"/>
+<attribute name="MANUF" value="Lite-On Inc." constant="no"/>
+<attribute name="MANUF-PN" value="LTST-C191KGKT" constant="no"/>
+<attribute name="PACKAGE" value="0603" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="LTST-C191TBKT" package="LED_0603">
+<connects>
+<connect gate="G$1" pin="A" pad="IN"/>
+<connect gate="G$1" pin="C" pad="OUT"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="3V_RES" value="1ohm" constant="no"/>
+<attribute name="5V_RES" value="100ohm" constant="no"/>
+<attribute name="COLOR" value="Blue" constant="no"/>
+<attribute name="COST" value=".46" constant="no"/>
+<attribute name="DATASHEET" value="http://bxhd.me/1Q60hfy" constant="no"/>
+<attribute name="DIGIKEY" value="160-1647-1-ND" constant="no"/>
+<attribute name="DIGIKEY_URL" value="http://bxhd.me/1Q60grT" constant="no"/>
+<attribute name="FV" value="3.3" constant="no"/>
+<attribute name="MA" value="20" constant="no"/>
+<attribute name="MANUF" value="Lite-On Inc" constant="no"/>
+<attribute name="MANUF_PN" value="LTST-C191TBKT" constant="no"/>
+<attribute name="PACKAGE" value="0603" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="LTST-C191KFKT" package="LED_0603">
+<connects>
+<connect gate="G$1" pin="A" pad="IN"/>
+<connect gate="G$1" pin="C" pad="OUT"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="3V_RES" value="56ohm" constant="no"/>
+<attribute name="5V_RES" value="150ohm" constant="no"/>
+<attribute name="COLOR" value="Orange" constant="no"/>
+<attribute name="DATASHEET" value="http://bxhd.me/1Q61mnD" constant="no"/>
+<attribute name="DIGIKEY" value="160-1445-1-ND" constant="no"/>
+<attribute name="DIGIKEY_URL" value="http://bxhd.me/1Q61inP" constant="no"/>
+<attribute name="FV" value="2" constant="no"/>
+<attribute name="MA" value="20" constant="no"/>
+<attribute name="MANUF" value="Lite-On Inc" constant="no"/>
+<attribute name="MANUF_PN" value="LTST-C191KFKT" constant="no"/>
+<attribute name="PACKAGE" value="0603" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -2382,6 +2587,102 @@ for any losses in long circuit loops.
 </technology>
 </technologies>
 </device>
+<device name="ERJ-6ENF1200V" package="0805">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="COST" value=".1" constant="no"/>
+<attribute name="DATASHEET" value="http://bxhd.me/1WGyFPR" constant="no"/>
+<attribute name="DIGIKEY" value="P120CCT-ND" constant="no"/>
+<attribute name="DIGIKEY_URL" value="http://bxhd.me/1WGyC6H" constant="no"/>
+<attribute name="HEIGHT" value=".028" constant="no"/>
+<attribute name="MANUF" value="Panasonic" constant="no"/>
+<attribute name="MANUF_PN" value="ERJ-6ENF1200V" constant="no"/>
+<attribute name="PACKAGE" value="0805" constant="no"/>
+<attribute name="TOLERANCE" value="±1" constant="no"/>
+<attribute name="VALUE" value="120" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="CRCW04021R00FKEDHP" package="0402">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="COST" value=".19" constant="no"/>
+<attribute name="DATASHEET" value="http://bxhd.me/1FdWpWV" constant="no"/>
+<attribute name="DIGIKEY" value="541-1.00YCT-ND" constant="no"/>
+<attribute name="DIGIKEY_URL" value="http://bxhd.me/1Q64WxW" constant="no"/>
+<attribute name="MANUF" value="Vishay Dale" constant="no"/>
+<attribute name="MANUF_PN" value="CRCW04021R00FKEDHP" constant="no"/>
+<attribute name="PACKAGE" value="0402" constant="no"/>
+<attribute name="VALUE" value="1ohm" constant="no"/>
+<attribute name="WATTAGE" value="1/8" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="CRCW0402100RFKEDHP" package="0402">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="COST" value=".17" constant="no"/>
+<attribute name="DATASHEET" value="http://bxhd.me/1FdWpWV" constant="no"/>
+<attribute name="DIGIKEY" value="541-100YCT-ND" constant="no"/>
+<attribute name="DIKIGEY_URL" value="http://bxhd.me/1RKoI0q" constant="no"/>
+<attribute name="MANUF" value="Vishay Dale" constant="no"/>
+<attribute name="MANUF_PN" value="CRCW0402100RFKEDHP" constant="no"/>
+<attribute name="PACKAGE" value="0402" constant="no"/>
+<attribute name="VALUE" value="100ohm" constant="no"/>
+<attribute name="WATTAGE" value="1/8" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="CRCW040247R0FKEDHP" package="0402">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="COST" value=".18" constant="no"/>
+<attribute name="DATASHEET" value="http://bxhd.me/1FdWpWV" constant="no"/>
+<attribute name="DIGIKEY" value="541-47.0YCT-ND" constant="no"/>
+<attribute name="DIGIKEY_URL" value="http://bxhd.me/1RKqIWq" constant="no"/>
+<attribute name="MANUF" value="Vishay Dale" constant="no"/>
+<attribute name="MANUF_PN" value="CRCW040247R0FKEDHP" constant="no"/>
+<attribute name="PACKAGE" value="0204" constant="no"/>
+<attribute name="VALUE" value="47ohm" constant="no"/>
+<attribute name="WATTAGE" value="1/8" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="CRCW0402162RFKEDHP" package="0402">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="COST" value=".14" constant="no"/>
+<attribute name="DATASHEET" value="http://bxhd.me/1FdWpWV" constant="no"/>
+<attribute name="DIGIKEY" value="541-162YCT-ND" constant="no"/>
+<attribute name="DIGIKEY_URL" value="http://bxhd.me/1RKrXF2" constant="no"/>
+<attribute name="MANUF" value="Vishay Dale" constant="no"/>
+<attribute name="MANUF_PN" value="CRCW0402162RFKEDHP" constant="no"/>
+<attribute name="PACKAGE" value="0402" constant="no"/>
+<attribute name="VALUE" value="162ohm" constant="no"/>
+<attribute name="WATTAGE" value="1/8" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="FUSE_WITH_HOLDER" prefix="F" uservalue="yes">
@@ -2498,6 +2799,30 @@ for any losses in long circuit loops.
 <attribute name="MANUF" value="Texas Instrument" constant="no"/>
 <attribute name="MANUF_PN" value="SN75176BP" constant="no"/>
 <attribute name="URL" value="http://bxhd.me/1Na8oHi" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="SN65HVD23D" package="8-SOIC">
+<connects>
+<connect gate="G$1" pin="!RE" pad="P$2"/>
+<connect gate="G$1" pin="A" pad="P$6"/>
+<connect gate="G$1" pin="B" pad="P$7"/>
+<connect gate="G$1" pin="D" pad="P$4"/>
+<connect gate="G$1" pin="DE" pad="P$3"/>
+<connect gate="G$1" pin="GND" pad="P$5"/>
+<connect gate="G$1" pin="R" pad="P$1"/>
+<connect gate="G$1" pin="VCC" pad="P$8"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="CHIPSET" value="RS485" constant="no"/>
+<attribute name="COST" value="5.54" constant="no"/>
+<attribute name="DATASHEET" value="http://bxhd.me/1WGAM68" constant="no"/>
+<attribute name="DIGIKEY" value="296-15230-5-ND" constant="no"/>
+<attribute name="DIGIKEY_URL" value="http://bxhd.me/1WGALz7" constant="no"/>
+<attribute name="MANUF" value="TI" constant="no"/>
+<attribute name="MANUF_PN" value="SN65HVD23D" constant="no"/>
+<attribute name="PACKAGE" value="8-SOIC" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -2680,10 +3005,52 @@ CBUS1: RXLED</description>
 <technologies>
 <technology name="">
 <attribute name="COST" value="1.37" constant="no"/>
-<attribute name="CO_DIGIKEY" value="H12192CT-ND" constant="no"/>
+<attribute name="DATASHEET" value="http://bxhd.me/1g2MMOA" constant="no"/>
+<attribute name="DIGIKEY" value="H12192CT-ND" constant="no"/>
+<attribute name="DIGIKEY_URL" value="http://bxhd.me/1RKAV5h" constant="no"/>
 <attribute name="MANUF" value="Hirose" constant="no"/>
 <attribute name="MANUF_PN" value="ZX62WRD-B-5PC" constant="no"/>
-<attribute name="URL" value="http://bxhd.me/1g2MMOA" constant="no"/>
+<attribute name="MOUNTING" value="Top" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="USB_MOCRO_B_MOLEX_1050171001" package="USB_MICRO_B_RECEPTICAL_MOLEX_1050171001_BOTTOM_MOUNT">
+<connects>
+<connect gate="G$1" pin="D+" pad="3"/>
+<connect gate="G$1" pin="D-" pad="2"/>
+<connect gate="G$1" pin="GND" pad="5 P$1 P$2 P$3 P$4"/>
+<connect gate="G$1" pin="NC" pad="4"/>
+<connect gate="G$1" pin="VCC" pad="1"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="COST" value="1.53" constant="no"/>
+<attribute name="DATASHEET" value="http://bxhd.me/1RKAF6f" constant="no"/>
+<attribute name="DIGIKEY" value="WM11262CT-ND" constant="no"/>
+<attribute name="DIGIKEY_URL" value="http://bxhd.me/1RKAK9R" constant="no"/>
+<attribute name="MANUF" value="Molex" constant="no"/>
+<attribute name="MANUF_PN" value="050171001" constant="no"/>
+<attribute name="MOUNTING" value="Bottom" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="USB_MICRO_B_MOLEX_1051640001_TOP" package="USB_MOCRI_B-RECPETICAL_MOLEX_1051640001_TOP_MOUNT">
+<connects>
+<connect gate="G$1" pin="D+" pad="3"/>
+<connect gate="G$1" pin="D-" pad="2"/>
+<connect gate="G$1" pin="GND" pad="5 P$1 P$2 P$3 P$4"/>
+<connect gate="G$1" pin="NC" pad="4"/>
+<connect gate="G$1" pin="VCC" pad="1"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="COST" value=".88" constant="no"/>
+<attribute name="DATASHEET" value="http://bxhd.me/1kd4oKT" constant="no"/>
+<attribute name="DIGIKEY" value="WM11263CT-ND" constant="no"/>
+<attribute name="DIGIKEY_URL" value="http://bxhd.me/1kd4nX8" constant="no"/>
+<attribute name="MANUF" value="Molex" constant="no"/>
+<attribute name="MANUF_PN" value="1051640001" constant="no"/>
+<attribute name="MOUNTING" value="Top" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -2819,6 +3186,23 @@ CBUS1: RXLED</description>
 </technology>
 </technologies>
 </device>
+<device name="0805_1UF_GCM21BR71E105KA56L" package="0805">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="COST" value=".29" constant="no"/>
+<attribute name="DATASHEET" value="http://bxhd.me/1OR4tzU" constant="no"/>
+<attribute name="DIGIKEY" value="490-4785-1-ND" constant="no"/>
+<attribute name="DIGIKEY_URL" value="http://bxhd.me/1OR4vI1" constant="no"/>
+<attribute name="MANUF" value="Murata" constant="no"/>
+<attribute name="MANUF_PN" value="GCM21BR71E105KA56L" constant="no"/>
+<attribute name="VALUE" value="1uF" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="FERRITE_BEAD" prefix="FB">
@@ -2902,7 +3286,7 @@ CBUS1: RXLED</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="PADS">
+<deviceset name="PADS" prefix="P" uservalue="yes">
 <gates>
 <gate name="G$1" symbol="PAD" x="0" y="0"/>
 </gates>
@@ -2929,6 +3313,67 @@ CBUS1: RXLED</description>
 </connects>
 <technologies>
 <technology name=""/>
+</technologies>
+</device>
+<device name="" package="2X4MM_PAD">
+<connects>
+<connect gate="G$1" pin="PAD" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="LINEAR_REGULATOR" prefix="U">
+<gates>
+<gate name="G$1" symbol="LINEAR_REGULATOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOT23-3">
+<connects>
+<connect gate="G$1" pin="GROUND" pad="3"/>
+<connect gate="G$1" pin="IN" pad="1"/>
+<connect gate="G$1" pin="OUT" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="COST" value=".9" constant="no"/>
+<attribute name="DATASHEET" value="http://bxhd.me/1OR6RXn" constant="no"/>
+<attribute name="DIGIKEY" value="1028-1312-6-ND" constant="no"/>
+<attribute name="DIGIKEY_URL" value="http://bxhd.me/1OR6Rql" constant="no"/>
+<attribute name="INPUT" value="3.5v-14v" constant="no"/>
+<attribute name="MANUF" value="Richtek" constant="no"/>
+<attribute name="MANUF_PN" value="RT9064-50GV" constant="no"/>
+<attribute name="OUTPUT" value="5v" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SMD_RESISTOR_JUMPER" prefix="J">
+<gates>
+<gate name="G$1" symbol="HEADER_3" x="0" y="0"/>
+</gates>
+<devices>
+<device name="PANASONIC_0805" package="SMD_RESISTOR_JUMPER_2">
+<connects>
+<connect gate="G$1" pin="1" pad="O1"/>
+<connect gate="G$1" pin="2" pad="P$1"/>
+<connect gate="G$1" pin="3" pad="02"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="COST" value=".1" constant="no"/>
+<attribute name="DATASHEET" value="http://bxhd.me/1WGwU5e" constant="no"/>
+<attribute name="DIGIKEY" value="P0.0ACT-ND" constant="no"/>
+<attribute name="DIGIKEY_URL" value="http://bxhd.me/1WGwThs" constant="no"/>
+<attribute name="MANUF" value="Panasonic" constant="no"/>
+<attribute name="MANUF_PN" value="ERJ-6GEY0R00V" constant="no"/>
+<attribute name="OPTION1" value="IN" constant="no"/>
+<attribute name="OPTION2" value="OUT" constant="no"/>
+<attribute name="VALUE" value="0ohm" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
