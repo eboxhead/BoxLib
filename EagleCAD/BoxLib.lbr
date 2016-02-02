@@ -27,7 +27,7 @@
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
-<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="yes" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
 <layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
@@ -43,7 +43,7 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
@@ -1008,7 +1008,6 @@
 </polygon>
 <text x="0" y="0" size="0.508" layer="21" rot="R45" align="center">&gt;Chipset</text>
 <text x="1.5" y="-1.905" size="0.508" layer="25" align="center-right">&gt;Name</text>
-<wire x1="-2.5527" y1="1.778" x2="2.5527" y2="1.778" width="0.0254" layer="21"/>
 </package>
 <package name="SOT23_2.8MM">
 <smd name="3" x="0.8855" y="0" dx="0.802" dy="0.972" layer="1" rot="R270"/>
@@ -1135,19 +1134,34 @@
 <smd name="4" x="-1.71" y="-0.65" dx="1.38" dy="0.45" layer="1"/>
 <smd name="5" x="-1.71" y="-1.3" dx="1.38" dy="0.45" layer="1"/>
 <wire x1="2.4" y1="-3.81" x2="2.4" y2="3.81" width="0.0254" layer="49"/>
-<smd name="P$1" x="-1.35" y="-2.4625" dx="2.1" dy="1.475" layer="1" rot="R180"/>
-<smd name="P$2" x="-1.35" y="2.4625" dx="2.1" dy="1.475" layer="1" rot="R180"/>
-<pad name="P$3" x="1" y="-3.95" drill="0.5" diameter="1.1" shape="long" rot="R180"/>
-<pad name="P$4" x="1" y="3.95" drill="0.5" diameter="1.1" shape="long" rot="R180"/>
+<smd name="GND1" x="-1.35" y="-2.4625" dx="2.1" dy="1.475" layer="1" rot="R180"/>
+<smd name="GND2" x="-1.35" y="2.4625" dx="2.1" dy="1.475" layer="1" rot="R180"/>
 <circle x="-2.908" y="1.27" radius="0.0254" width="0.127" layer="21"/>
 <text x="-3.175" y="-2.54" size="0.508" layer="25" rot="R90" align="center-left">&gt;name</text>
 <text x="2.54" y="0" size="0.508" layer="49" rot="R90" align="top-center">Board Edge</text>
-<hole x="0.619" y="3.95" drill="0.635"/>
-<hole x="1" y="3.95" drill="0.635"/>
-<hole x="1.381" y="3.95" drill="0.635"/>
-<hole x="0.619" y="-3.95" drill="0.635"/>
-<hole x="1" y="-3.95" drill="0.635"/>
-<hole x="1.381" y="-3.95" drill="0.635"/>
+<pad name="GND50" x="3.921" y="3.95" drill="0.5"/>
+<pad name="GND4" x="-1.921" y="3.95" drill="0.5"/>
+<wire x1="0.619" y1="3.7" x2="1.381" y2="3.7" width="0.0254" layer="20"/>
+<wire x1="1.381" y1="3.7" x2="1.631" y2="3.95" width="0.0254" layer="20" curve="90"/>
+<wire x1="1.631" y1="3.95" x2="1.381" y2="4.2" width="0.0254" layer="20" curve="90"/>
+<wire x1="1.381" y1="4.2" x2="0.619" y2="4.2" width="0.0254" layer="20"/>
+<wire x1="0.619" y1="4.2" x2="0.369" y2="3.95" width="0.0254" layer="20" curve="90"/>
+<wire x1="0.369" y1="3.95" x2="0.619" y2="3.7" width="0.0254" layer="20" curve="90"/>
+<pad name="GND70" x="1.381" y="-3.95" drill="0.5"/>
+<pad name="GND5" x="0.619" y="-3.95" drill="0.5"/>
+<wire x1="0.369" y1="-3.95" x2="0.619" y2="-4.2" width="0.0254" layer="46" curve="90"/>
+<wire x1="0.619" y1="-4.2" x2="1.381" y2="-4.2" width="0.0254" layer="46"/>
+<wire x1="1.381" y1="-4.2" x2="1.631" y2="-3.95" width="0.0254" layer="46" curve="90"/>
+<wire x1="1.631" y1="-3.95" x2="1.381" y2="-3.7" width="0.0254" layer="46" curve="90"/>
+<wire x1="1.381" y1="-3.7" x2="0.619" y2="-3.7" width="0.0254" layer="46"/>
+<wire x1="0.619" y1="-3.7" x2="0.369" y2="-3.95" width="0.0254" layer="46" curve="90"/>
+<wire x1="1.381" y1="-3.95" x2="0.619" y2="-3.95" width="1.016" layer="1"/>
+<wire x1="0.619" y1="-3.95" x2="1.381" y2="-3.95" width="1.27" layer="29"/>
+<wire x1="1.381" y1="-3.95" x2="0.619" y2="-3.95" width="1.27" layer="30"/>
+<wire x1="1.381" y1="-3.95" x2="0.619" y2="-3.95" width="1.016" layer="16"/>
+<smd name="GND6" x="0.889" y="0.8375" dx="1.9" dy="1.175" layer="1"/>
+<smd name="GND7" x="0.889" y="-0.8375" dx="1.9" dy="1.175" layer="1"/>
+<pad name="P$1" x="1" y="3.95" drill="0.5" shape="long"/>
 </package>
 <package name="POLYFUSE_LITTLEFUSE_0402">
 <smd name="P$1" x="-0.508" y="0" dx="0.762" dy="0.508" layer="1" rot="R90"/>
@@ -10746,7 +10760,7 @@ CBUS1: RXLED</description>
 <connects>
 <connect gate="G$1" pin="D+" pad="3"/>
 <connect gate="G$1" pin="D-" pad="2"/>
-<connect gate="G$1" pin="GND" pad="5 P$1 P$2 P$3 P$4"/>
+<connect gate="G$1" pin="GND" pad="5 GND1 GND2 GND4 GND5 GND50 GND70"/>
 <connect gate="G$1" pin="NC" pad="4"/>
 <connect gate="G$1" pin="VCC" pad="1"/>
 </connects>

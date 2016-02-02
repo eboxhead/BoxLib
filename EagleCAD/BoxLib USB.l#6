@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.2.0">
+<eagle version="7.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.01" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.005" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -42,7 +42,7 @@
 <layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
@@ -73,17 +73,36 @@
 <circle x="-1.016" y="3.81" radius="0.127" width="0.254" layer="21"/>
 <wire x1="-2.56" y1="11.43" x2="2.56" y2="11.43" width="0.254" layer="49"/>
 <text x="0" y="10.922" size="0.8128" layer="49" align="top-center">Board Edge</text>
-<wire x1="2.56" y1="6.604" x2="2.56" y2="-4.572" width="0.254" layer="21"/>
-<wire x1="2.56" y1="-4.572" x2="-2.56" y2="-4.572" width="0.254" layer="21"/>
-<wire x1="-2.56" y1="-4.572" x2="-2.56" y2="6.604" width="0.254" layer="21"/>
+<text x="3.81" y="0" size="0.8128" layer="21" rot="R90" align="bottom-center">&gt;Name</text>
+</package>
+<package name="MOLEX_0480370001_PLUG_TYPE_A">
+<pad name="GND@1" x="-5.7" y="0" drill="1.05" shape="long" rot="R90"/>
+<hole x="-2.75" y="0" drill="1.05"/>
+<hole x="2.75" y="0" drill="1.05"/>
+<pad name="GND" x="3.5" y="-2.125" drill="0.8"/>
+<pad name="D+" x="1" y="-2.125" drill="0.8"/>
+<pad name="D-" x="-1" y="-2.125" drill="0.8"/>
+<pad name="5+" x="-3.5" y="-2.125" drill="0.8"/>
+<hole x="-5.7" y="0.762" drill="1.05"/>
+<hole x="-5.7" y="-0.762" drill="1.05"/>
+<hole x="-5.7" y="-0.381" drill="1.05"/>
+<hole x="-5.7" y="0.381" drill="1.05"/>
+<pad name="GND@2" x="5.7" y="0" drill="1.05" shape="long" rot="R90"/>
+<hole x="5.7" y="0.762" drill="1.05"/>
+<hole x="5.7" y="-0.762" drill="1.05"/>
+<hole x="5.7" y="-0.381" drill="1.05"/>
+<hole x="5.7" y="0.381" drill="1.05"/>
+<wire x1="-5.08" y1="2.667" x2="5.08" y2="2.667" width="0.127" layer="49"/>
+<text x="0" y="2.54" size="0.8128" layer="49" align="top-center">Board Edge</text>
+<text x="-7.112" y="0" size="0.8128" layer="21" rot="R90" align="bottom-center">&gt;Name</text>
 </package>
 </packages>
 <symbols>
 <symbol name="USB_A_4_PIN">
 <pin name="+5" x="-3.81" y="-5.08" visible="pin" length="middle" rot="R90"/>
-<pin name="D-" x="-1.27" y="-5.08" length="middle" rot="R90"/>
-<pin name="D+" x="1.27" y="-5.08" length="middle" rot="R90"/>
-<pin name="GND" x="3.81" y="-5.08" length="middle" rot="R90"/>
+<pin name="D-" x="-1.27" y="-5.08" visible="pin" length="middle" rot="R90"/>
+<pin name="D+" x="1.27" y="-5.08" visible="pin" length="middle" rot="R90"/>
+<pin name="GND" x="3.81" y="-5.08" visible="pin" length="middle" rot="R90"/>
 <wire x1="5.08" y1="0" x2="-5.08" y2="0" width="0.254" layer="94"/>
 <wire x1="-5.08" y1="0" x2="-5.08" y2="6.731" width="0.254" layer="94"/>
 <wire x1="-5.08" y1="6.731" x2="5.08" y2="6.731" width="0.254" layer="94"/>
@@ -91,10 +110,11 @@
 <text x="-5.08" y="7.366" size="0.8128" layer="95">&gt;Name</text>
 <text x="5.715" y="1.27" size="0.8128" layer="97">&gt;Manuf</text>
 <text x="5.715" y="0" size="0.8128" layer="96">&gt;Manuf_PN</text>
+<text x="5.08" y="7.366" size="0.8128" layer="97" align="bottom-right">&gt;Connector</text>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="USB_RECEPTICLE">
+<deviceset name="USB_RECEPTICLE" prefix="CON" uservalue="yes">
 <gates>
 <gate name="G$1" symbol="USB_A_4_PIN" x="0" y="0"/>
 </gates>
@@ -117,6 +137,35 @@
 <attribute name="MANUF_PN" value="0482040001" constant="no"/>
 <attribute name="MOUNTING" value="PTH" constant="no"/>
 <attribute name="ORIENTATION" value="Right Angle. Vetical" constant="no"/>
+<attribute name="SIZE" value="A" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="USB_PLUG" prefix="CON" uservalue="yes">
+<gates>
+<gate name="G$1" symbol="USB_A_4_PIN" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="MOLEX_0480370001_PLUG_TYPE_A">
+<connects>
+<connect gate="G$1" pin="+5" pad="5+"/>
+<connect gate="G$1" pin="D+" pad="D+"/>
+<connect gate="G$1" pin="D-" pad="D-"/>
+<connect gate="G$1" pin="GND" pad="GND GND@1 GND@2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="CONNECTOR" value="Plug" constant="no"/>
+<attribute name="COST" value="1.19" constant="no"/>
+<attribute name="DATASHEET" value="http://bxhd.me/1S4TROn" constant="no"/>
+<attribute name="DIGIKEY" value="WM17117-ND" constant="no"/>
+<attribute name="DIGIKEY_URL" value="http://bxhd.me/1S4TZxi" constant="no"/>
+<attribute name="MANUF" value="Molex" constant="no"/>
+<attribute name="MANUF_PN" value="0480370001" constant="no"/>
+<attribute name="MOUNTING" value="PTH" constant="no"/>
+<attribute name="ORIENTATION" value="Right Angle, Horizontal" constant="no"/>
 <attribute name="SIZE" value="A" constant="no"/>
 </technology>
 </technologies>
