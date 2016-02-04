@@ -76,7 +76,7 @@
 <text x="3.81" y="0" size="0.8128" layer="21" rot="R90" align="bottom-center">&gt;Name</text>
 </package>
 <package name="MOLEX_0480370001_PLUG_TYPE_A">
-<pad name="GND@1" x="-5.7" y="0.762" drill="1.05" rot="R90"/>
+<pad name="GND@1" x="-5.7" y="0.762" drill="1.05" diameter="1.778" rot="R90"/>
 <hole x="-2.75" y="0" drill="1.05"/>
 <hole x="2.75" y="0" drill="1.05"/>
 <pad name="GND" x="3.5" y="-2.125" drill="0.8"/>
