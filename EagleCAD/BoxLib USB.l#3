@@ -76,7 +76,7 @@
 <text x="3.81" y="0" size="0.8128" layer="21" rot="R90" align="bottom-center">&gt;Name</text>
 </package>
 <package name="MOLEX_0480370001_PLUG_TYPE_A">
-<pad name="GND@1" x="-5.7" y="0.762" drill="1.05" diameter="1.778" rot="R90"/>
+<pad name="GND1" x="-5.7" y="0.762" drill="1.05" rot="R90"/>
 <hole x="-2.75" y="0" drill="1.05"/>
 <hole x="2.75" y="0" drill="1.05"/>
 <pad name="GND" x="3.5" y="-2.125" drill="0.8"/>
@@ -86,9 +86,9 @@
 <wire x1="-5.08" y1="2.667" x2="5.08" y2="2.667" width="0.127" layer="49"/>
 <text x="0" y="2.54" size="0.8128" layer="49" align="top-center">Board Edge</text>
 <text x="-7.112" y="0" size="0.8128" layer="21" rot="R90" align="bottom-center">&gt;Name</text>
-<pad name="GND@2" x="-5.7" y="-0.762" drill="1.05" rot="R90"/>
-<wire x1="-5.7" y1="0.7874" x2="-5.7" y2="-0.7874" width="1.7" layer="1"/>
-<wire x1="-5.7" y1="0.7874" x2="-5.7" y2="-0.7874" width="1.7" layer="16"/>
+<pad name="GND2" x="-5.7" y="-0.762" drill="1.05" rot="R90"/>
+<wire x1="-5.7" y1="0.889" x2="-5.7" y2="-0.889" width="1.7" layer="1"/>
+<wire x1="-5.7" y1="0.889" x2="-5.7" y2="-0.889" width="1.7" layer="16"/>
 <wire x1="-5.7" y1="0.889" x2="-5.7" y2="-0.889" width="1.9304" layer="30"/>
 <wire x1="-5.7" y1="0.889" x2="-5.7" y2="-0.889" width="1.9304" layer="29"/>
 <wire x1="-6.225" y1="0.787" x2="-6.225" y2="-0.787" width="0.127" layer="46"/>
@@ -171,7 +171,7 @@
 <connect gate="G$1" pin="+5" pad="5+"/>
 <connect gate="G$1" pin="D+" pad="D+"/>
 <connect gate="G$1" pin="D-" pad="D-"/>
-<connect gate="G$1" pin="GND" pad="GND GND@1 GND@2 GND@3 GND@4"/>
+<connect gate="G$1" pin="GND" pad="GND GND1 GND2 GND@3 GND@4"/>
 </connects>
 <technologies>
 <technology name="">
